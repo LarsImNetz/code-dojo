@@ -16,8 +16,8 @@ public class TestDiamondPrinter {
 	@Test
 	public void test_printA() {
 
-		String actual = printer.diamond('A');
-		String expected = "A";
+		final String actual = printer.diamond('A');
+		final String expected = "A";
 
 		Assert.assertEquals(expected, actual);
 	}
@@ -30,8 +30,8 @@ public class TestDiamondPrinter {
 	@Test
 	public void test_printB() {
 
-		String actual = printer.diamond('B');
-		String expected = " A\nB B\n A\n";
+		final String actual = printer.diamond('B');
+		final String expected = " A\nB B\n A\n";
 
 		Assert.assertEquals(expected, actual);
 	}
@@ -39,8 +39,8 @@ public class TestDiamondPrinter {
 	@Test
 	public void test_lineA() {
 
-		String actual = printer.line('A');
-		String expected = "A";
+		final String actual = printer.line('A');
+		final String expected = "A";
 
 		Assert.assertEquals(expected, actual);
 	}
@@ -48,8 +48,8 @@ public class TestDiamondPrinter {
 	@Test
 	public void test_lineB() {
 
-		String actual = printer.line('B');
-		String expected = "B B";
+		final String actual = printer.line('B');
+		final String expected = "B B";
 
 		Assert.assertEquals(expected, actual);
 	}
@@ -57,8 +57,17 @@ public class TestDiamondPrinter {
 	@Test
 	public void test_lineD() {
 
-		String actual = printer.line('D');
-		String expected = "D     D";
+		final String actual = printer.line('D');
+		final String expected = "D     D";
+
+		Assert.assertEquals(expected, actual);
+	}
+
+	@Test
+	public void test_outerIndentA() {
+
+		final String actual = printer.outerIndent('A');
+		final String expected = "";
 
 		Assert.assertEquals(expected, actual);
 	}
@@ -66,8 +75,17 @@ public class TestDiamondPrinter {
 	@Test
 	public void test_outerIndentB() {
 
-		String actual = printer.outerIndent('B');
-		String expected = " ";
+		final String actual = printer.outerIndent('B');
+		final String expected = " ";
+
+		Assert.assertEquals(expected, actual);
+	}
+
+	@Test
+	public void test_outerIndentC() {
+
+		final String actual = printer.outerIndent('C');
+		final String expected = "  ";
 
 		Assert.assertEquals(expected, actual);
 	}
@@ -75,8 +93,8 @@ public class TestDiamondPrinter {
 	@Test
 	public void test_innerIndentB() {
 
-		String actual = printer.innerIndent('B');
-		String expected = " ";
+		final String actual = printer.innerIndent('B');
+		final String expected = " ";
 
 		Assert.assertEquals(expected, actual);
 	}
@@ -84,8 +102,8 @@ public class TestDiamondPrinter {
 	@Test
 	public void test_innerIndentD() {
 
-		String actual = printer.innerIndent('D');
-		String expected = "     ";
+		final String actual = printer.innerIndent('D');
+		final String expected = "     ";
 
 		Assert.assertEquals(expected, actual);
 	}

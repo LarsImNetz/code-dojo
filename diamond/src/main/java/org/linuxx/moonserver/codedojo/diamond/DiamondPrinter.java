@@ -3,52 +3,49 @@ package org.linuxx.moonserver.codedojo.diamond;
 import com.google.common.base.Preconditions;
 
 public class DiamondPrinter {
-	public DiamondPrinter() {}
-	
-	public String diamond(char letter) {
+	public DiamondPrinter() {
+	}
+
+	public String diamond(final char letter) {
 		Preconditions.checkArgument(letter >= 'A' && letter <= 'Z');
 
 		if (letter == 'A') {
 			return "A";
 		}
-		
-		StringBuilder result = new StringBuilder();
+
+		final StringBuilder result = new StringBuilder();
 
 		char down = letter;
 		for (char c = 'A'; c < letter; c++) {
 			result.append(outerIndent(down)).append(line(c)).append("\n");
-			down --;
+			down--;
 		}
 		char up = 'A';
 		for (char c = letter; c >= 'A'; c--) {
 			result.append(outerIndent(up)).append(line(c)).append("\n");
 			up++;
 		}
-		
+
 		return result.toString();
 	}
 
-	public String outerIndent(char letter) {
+	public String outerIndent(final char letter) {
 		Preconditions.checkArgument(letter >= 'A' && letter <= 'Z');
 
-		String result = "";
-		for (char c = letter; c >= 'B'; c--) {
-			result += " ";
-		}
+		final int count = letter - 'A';
+		final String result = new Indent().getIndent(count);
 		return result;
 	}
 
-	public String innerIndent(char letter) {
+	public String innerIndent(final char letter) {
 		Preconditions.checkArgument(letter >= 'A' && letter <= 'Z');
 
-		String result = " ";
-		for (char c = letter; c >= 'C'; c--) {
-			result += "  ";
-		}
+		final int count = letter - 'A';
+		final String result = new InnerIndent().getIndent(count);
 		return result;
 	}
 
-	public String line(char letter) {
+	public String line(final char letter) {
 		Preconditions.checkArgument(letter >= 'A' && letter <= 'Z');
 
 		if (letter == 'A') {
