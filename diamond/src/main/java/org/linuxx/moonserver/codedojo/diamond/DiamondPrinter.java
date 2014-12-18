@@ -29,7 +29,7 @@ public class DiamondPrinter {
 		return result.toString();
 	}
 
-	public String outerIndent(final char letter) {
+	String outerIndent(final char letter) {
 		Preconditions.checkArgument(letter >= 'A' && letter <= 'Z');
 
 		final int count = letter - 'A';
@@ -37,7 +37,7 @@ public class DiamondPrinter {
 		return result;
 	}
 
-	public String innerIndent(final char letter) {
+	String innerIndent(final char letter) {
 		Preconditions.checkArgument(letter >= 'A' && letter <= 'Z');
 
 		final int count = letter - 'A';
@@ -45,7 +45,7 @@ public class DiamondPrinter {
 		return result;
 	}
 
-	public String line(final char letter) {
+	String line(final char letter) {
 		Preconditions.checkArgument(letter >= 'A' && letter <= 'Z');
 
 		if (letter == 'A') {

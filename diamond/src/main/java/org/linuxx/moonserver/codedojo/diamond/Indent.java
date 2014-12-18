@@ -6,11 +6,11 @@ class Indent implements IIndent {
 
 	@Override
 	public String getIndent(final int count) {
-		String result = "";
+		final StringBuilder result = new StringBuilder();
 		for (int i = 0; i < faktorisieren(count); i++) {
-			result += " ";
+			result.append(" ");
 		}
-		return result;
+		return result.toString();
 	}
 
 	public int faktorisieren(final int count) {
