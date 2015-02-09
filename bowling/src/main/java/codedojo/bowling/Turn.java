@@ -1,4 +1,4 @@
-package bowling;
+package codedojo.bowling;
 
 public class Turn {
 

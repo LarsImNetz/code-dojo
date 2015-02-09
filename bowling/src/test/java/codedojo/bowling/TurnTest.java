@@ -1,7 +1,9 @@
-package bowling;
+package codedojo.bowling;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import codedojo.bowling.Turn;
 
 public class TurnTest {
 
