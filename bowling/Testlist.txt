@@ -1,0 +1,23 @@
+Fertig Test 1: 1-2 Zahlen => STRIKE, SPARE, 0-9
+Fertig Test 2: Game.add(turn), Game.calculate() -> Ergebnis (ohne Sonderfaelle)
+Fertig Test 3: Spares behandeln
+Fertig Test 4: Strikes behandeln
+Fertig Test 4.1: Spare, gefolgt von Strike
+Fertig Test 4.2: Zwischenergebnis direkt nach Strike/Spare berechnen lassen
+Fertig Guiding-Test, vielleicht etwas zu spaet: Die drei Beispiele aus instructions
+Gestrichen Test 5: Game.add darf nur 10x aufgerufen werden
+Gestrichen Test 6: Game.add darf bei Spare in der 10ten Runde 11x aufgerufen werden
+Gestrichen Test 7: Game.add darf bei Strike in der 10ten Runde 12x aufgerufen werden
+Fertig Test 8: Turn.create -> Wertebereich pruefen
+ 
+Overview: Spiel bekommt 
+ 
+game.turn(Turn t)
+ 
+game.turn(Turn.STRIKE)
+game.turn(Turn.create(10, 0))
+ 
+Turn.STRIKE
+Turn.number(5, 5)
+ 
+Turn[12] turns
