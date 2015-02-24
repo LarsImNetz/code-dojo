@@ -52,4 +52,18 @@ public class Bowling {
 		}
 		return score;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder buf = new StringBuilder();
+		for (int i = 0; i < 10; i++) {
+			buf.append(turns[i].toString());
+			buf.append('|');
+		}
+		buf.append("|");
+		buf.append(turns[10]);
+		buf.append(turns[11]);
+
+		return buf.toString();
+	}
 }

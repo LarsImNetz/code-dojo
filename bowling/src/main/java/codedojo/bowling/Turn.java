@@ -32,4 +32,27 @@ public class Turn {
 	public int getSecondValue() {
 		return this.secondValue;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder buf = new StringBuilder();
+		if (firstValue == 10) {
+			buf.append("X");
+		} else {
+			buf.append(gameOutput(firstValue));
+			if (firstValue + secondValue == 10) {
+				buf.append("/");
+			} else {
+				buf.append(gameOutput(secondValue));
+			}
+		}
+		return buf.toString();
+	}
+
+	private String gameOutput(int value) {
+		if (value == 0) {
+			return "-";
+		}
+		return String.valueOf(value);
+	}
 }
