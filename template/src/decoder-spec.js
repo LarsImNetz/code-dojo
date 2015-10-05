@@ -1,9 +1,9 @@
-require('./file.js');
-require('./decoder.js');
+// require('./file.js');
+// require('./decoder.js');
 
 
 describe("decoder", function() {
-  var accountNumbers[];
+  var accountNumbers = [];
   accountNumbers[0] = '    _  _     _  _  _  _  _ ';
   accountNumbers[1] = '  | _| _||_||_ |_   ||_||_|';
   accountNumbers[2] = '  ||_  _|  | _||_|  ||_| _|';

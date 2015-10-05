@@ -1,0 +1,39 @@
+{
+	"name": "template",
+	"author": "Lars Langhans",
+	"description": "package for templates",
+	"private": true,
+	"version": "0.0.1",
+	"dependencies": {},
+	"engine": "0.10.x",
+	"dependencies": {},
+	"devDependencies": {
+		"bower": "~1.4.1",
+		"grunt": "~0.4.5",
+		"grunt-cli": "~0.1.13",
+		"grunt-contrib-clean": "~0.6.0",
+		"grunt-contrib-concat": "~0.5.0",
+		"grunt-contrib-copy": "~0.7.0",
+		"grunt-contrib-jshint": "~0.10.0",
+		"grunt-contrib-uglify": "~0.6.0",
+		"grunt-contrib-watch": "~0.6.1",
+		"grunt-sass": "~1.0.0",
+		"grunt-karma": "~0.10.1",
+		"grunt-processhtml": "0.3.6",
+		"karma": "0.12.37",
+		"karma-chrome-launcher": "0.2.0",
+		"karma-jasmine": "0.3.6",
+		"karma-phantomjs-launcher": "0.2.0"
+	},
+	"scripts": {
+		"pretest": "npm install",
+		"postinstall": "node node_modules/bower/bin/bower install",
+		"test": "node node_modules/grunt-cli/bin/grunt karma:unit",
+		"test-single-run": "node node_modules/grunt-cli/bin/grunt karma:continuous",
+		"clean": "node node_modules/grunt-cli/bin/grunt clean",
+		"build": "npm install && node node_modules/grunt-cli/bin/grunt",
+		"jshint": "node node_modules/grunt-cli/bin/grunt jshint",
+		"sass": "node node_modules/grunt-cli/bin/grunt sass",
+		"sass-watch": "node node_modules/grunt-cli/bin/grunt watch"
+	}
+}

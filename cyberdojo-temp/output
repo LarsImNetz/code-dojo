@@ -1,0 +1,6 @@
+ALERT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ALERT >>>          possible problem detected           >>>
+ALERT >>>   examine cyber-dojo.sh for detailed info    >>>
+ALERT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+./cyber-dojo.sh: 11: ./cyber-dojo.sh: n: not found

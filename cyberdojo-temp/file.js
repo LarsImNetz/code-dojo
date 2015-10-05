@@ -1,13 +1,8 @@
-/**
-* Wir erwarten ein 3wertiges Array welches Strings enthält, die wir scannen können
-*
-* numbers[0] = "   ";
-* numbers[1] = "|_|";
-* numbers[2] = "  |";
-*
-*/
-createFile = function(numbers) {
-  var accountNumber = numbers;
+createFile = function() {
+  var accountNumber = [];
+    accountNumber[0] = '    _  _     _  _  _  _  _ ';
+    accountNumber[1] = '  | _| _||_||_ |_   ||_||_|';
+    accountNumber[2] = '  ||_  _|  | _||_|  ||_| _|';
 
   var getAccountNumber = function() {
     return accountNumber;
@@ -21,6 +16,7 @@ createFile = function(numbers) {
     }
     return value;
   }
+
 
   return {
     getAccountNumber: getAccountNumber,

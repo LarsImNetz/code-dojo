@@ -6,6 +6,7 @@
 * numbers[2] = "  |";
 *
 */
+
 createFile = function(numbers) {
   var accountNumber = numbers;
 

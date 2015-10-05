@@ -1,7 +1,7 @@
-require('./file.js');
+// require('./file.js');
 
 describe("accountNumber", function() {
-  var numbers[];
+  var numbers = [];
   numbers[0] = "    _ ";
   numbers[1] = "  | _|";
   numbers[2] = "  ||_ ";
@@ -25,5 +25,5 @@ describe("accountNumber", function() {
     expect(file.getEncodedNumberAt(1).length).toEqual(9);
     expect(file.getEncodedNumberAt(1)).toEqual(" _  _||_ ");
   });
-  
+
 });

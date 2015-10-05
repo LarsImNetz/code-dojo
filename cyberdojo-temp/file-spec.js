@@ -1,13 +1,7 @@
 require('./file.js');
+file = createFile();
 
 describe("accountNumber", function() {
-  var numbers[];
-  numbers[0] = "    _ ";
-  numbers[1] = "  | _|";
-  numbers[2] = "  ||_ ";
-
-  var file = createFile(numbers);
-
   it("has been defined", function() {
     expect(file.getAccountNumber()).toBeDefined();
   });
@@ -25,5 +19,6 @@ describe("accountNumber", function() {
     expect(file.getEncodedNumberAt(1).length).toEqual(9);
     expect(file.getEncodedNumberAt(1)).toEqual(" _  _||_ ");
   });
+
   
 });
