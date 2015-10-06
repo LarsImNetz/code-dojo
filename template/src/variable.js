@@ -1,1 +1,0 @@
-aVariable = 1;
