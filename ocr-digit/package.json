@@ -1,0 +1,14 @@
+{
+	"name": "template",
+	"author": "Lars Langhans",
+	"description": "package for templates",
+	"private": true,
+	"version": "0.0.1",
+	"dependencies": {},
+	"devDependencies": {
+		"jasmine": "2.3.x"
+	},
+	"scripts": {
+		"test": "node node_modules/jasmine/bin/jasmine"
+	}
+}
