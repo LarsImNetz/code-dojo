@@ -13,10 +13,10 @@ describe("decoder with single number", function() {
 
   var file = filer.createFile(accountNumbers);
 
-    it("encodedNumber 1 converts to 1", function() {
-      var encodedNumber = file.getEncodedNumberAt(0);
-      expect(decoder.decode(encodedNumber)).toEqual(1);
-    });
+  it("encodedNumber 1 converts to 1", function() {
+    var encodedNumber = file.getEncodedNumberAt(0);
+    expect(decoder.decode(encodedNumber)).toEqual(1);
+  });
 });
 
 describe("decoder", function() {
@@ -52,10 +52,10 @@ describe("decoder", function() {
 
   it("decodes the whole array to 123456789", function() {
     var value = "";
-    for (var i = 0;i<9;i++) {
+    for (var i = 0; i < 9; i++) {
       value = value + decoder.decode(file.getEncodedNumberAt(i));
     }
-   expect(value).toEqual("123456789");
+    expect(value).toEqual("123456789");
   });
 
 });
