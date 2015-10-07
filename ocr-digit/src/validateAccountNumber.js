@@ -14,11 +14,15 @@ exports.createValidator = function(numberAsString) {
   var accountNumber = numberAsString;
   var d = [];
 
-  var isCheckSumValid = function() {
+  var init = function() {
     checkForString();
     checkLength();
 
     fillIntoDArray();
+  }
+
+  var isCheckSumValid = function() {
+    init();
     var checkSum = createCheckSum();
     return checkSum == 0;
   }
@@ -28,23 +32,19 @@ exports.createValidator = function(numberAsString) {
     for (let i = 1; i <= 9; i++) {
       var dValue = d[i];
       checksum = checksum + i * dValue;
-      console.log("d[" + (i) + "] := " + dValue + "  sum:" + checksum);
+      // console.log("d[" + (i) + "] := " + dValue + "  sum:" + checksum);
     }
     checksum = checksum % 11;
-    console.log("checksum modulo 11: " + checksum);
+    // console.log("checksum modulo 11: " + checksum);
     return checksum;
-  }
-
-  var getD = function(index) {
-    return d[index];
   }
 
   var fillIntoDArray = function() {
     var offset = 9;
-    console.log("fill into D");
+    // console.log("fill into D");
     for (let i = 0; i < accountNumber.length; i++) {
       var value = parseInt(accountNumber[i]);
-      console.log("d[" + offset + "]=" + value);
+      // console.log("d[" + offset + "]=" + value);
       d[offset--] = value;
     }
   }
@@ -69,9 +69,9 @@ exports.createValidator = function(numberAsString) {
   }
 
   return {
+    init: init,
     isValid: isCheckSumValid,
     checkForString: checkForString,
-    getCheckSum: createCheckSum,
-    getD: getD
+    getCheckSum: createCheckSum
   }
 };
