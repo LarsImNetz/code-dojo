@@ -12,12 +12,56 @@
 
 exports.createValidator = function(numberAsString) {
   var accountNumber = numberAsString;
+  var d = [];
 
-  var checkIfValid = function() {
-    if (isNumber(accountNumber)) {
-      throw new TypeError("Ist kein String");
+  var isCheckSumValid = function() {
+    checkForString();
+    checkLength();
+
+    fillIntoDArray();
+    var checkSum = createCheckSum();
+    return checkSum == 0;
+  }
+
+  var createCheckSum = function() {
+    var checksum = 0;
+    for (let i = 1; i <= 9; i++) {
+      var dValue = d[i];
+      checksum = checksum + i * dValue;
+      console.log("d[" + (i) + "] := " + dValue + "  sum:" + checksum);
     }
-    return 0;
+    checksum = checksum % 11;
+    console.log("checksum modulo 11: " + checksum);
+    return checksum;
+  }
+
+  var getD = function(index) {
+    return d[index];
+  }
+
+  var fillIntoDArray = function() {
+    var offset = 9;
+    console.log("fill into D");
+    for (let i = 0; i < accountNumber.length; i++) {
+      var value = parseInt(accountNumber[i]);
+      console.log("d[" + offset + "]=" + value);
+      d[offset--] = value;
+    }
+  }
+
+  var checkForString = function() {
+    if (typeof accountNumber != "string") {
+      throw new TypeError("Given account number is not a string.");
+    }
+  }
+
+  var checkLength = function() {
+    if (accountNumber.length < 9) {
+      throw new TypeError("Must at least 9 digits.");
+    }
+    if (accountNumber.length > 9) {
+      throw new TypeError("More than 9 digits.");
+    }
   }
 
   var isNumber = function(o) {
@@ -25,6 +69,9 @@ exports.createValidator = function(numberAsString) {
   }
 
   return {
-    isValid: checkIfValid
+    isValid: isCheckSumValid,
+    checkForString: checkForString,
+    getCheckSum: createCheckSum,
+    getD: getD
   }
 };
