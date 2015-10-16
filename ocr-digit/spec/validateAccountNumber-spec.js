@@ -130,3 +130,11 @@ describe("a spec for validate", function() {
   });
 
 });
+
+describe("a spec for validate", function() {
+  it("should check validation", function() {
+    var validator = module.createValidator("457508000");
+    var valid = validator.isValid();
+    expect(valid).toBe(true);
+  });
+});
