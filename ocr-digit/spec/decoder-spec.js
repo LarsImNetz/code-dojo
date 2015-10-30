@@ -21,9 +21,9 @@ describe("decoder with single number", function() {
 
 describe("decoder", function() {
   var accountNumbers = [];
-  accountNumbers[0] = '    _  _     _  _  _  _  _ ';
-  accountNumbers[1] = '  | _| _||_||_ |_   ||_||_|';
-  accountNumbers[2] = '  ||_  _|  | _||_|  ||_| _|';
+  accountNumbers[0] = '    _  _ ';
+  accountNumbers[1] = '  | _| _|';
+  accountNumbers[2] = '  ||_  _|';
 
   var file = filer.createFile(accountNumbers);
 
@@ -46,6 +46,18 @@ describe("decoder", function() {
       var encodedNumber = "schnubbel";
       expect(decoder.decode(encodedNumber)).toEqual('?');
   });
+});
+
+
+describe("not really decoder", function() {
+
+  var accountNumbers = [];
+  accountNumbers[0] = '    _  _     _  _  _  _  _ ';
+  accountNumbers[1] = '  | _| _||_||_ |_   ||_||_|';
+  accountNumbers[2] = '  ||_  _|  | _||_|  ||_| _|';
+
+  var file = filer.createFile(accountNumbers);
+
 
   it("decodes the whole array to 123456789", function() {
     var value = "";
