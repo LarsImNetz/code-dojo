@@ -15,7 +15,7 @@ describe("decoder with single number", function() {
 
   it("encodedNumber 1 converts to 1", function() {
     var encodedNumber = file.getEncodedNumberAt(0);
-    expect(decoder.decode(encodedNumber)).toEqual(1);
+    expect(decoder.decode(encodedNumber)).toEqual('1');
   });
 });
 
@@ -29,25 +29,22 @@ describe("decoder", function() {
 
   it("encodedNumber 1 converts to 1", function() {
     var encodedNumber = file.getEncodedNumberAt(0);
-    expect(decoder.decode(encodedNumber)).toEqual(1);
+    expect(decoder.decode(encodedNumber)).toEqual('1');
   });
 
   it("encodedNumber 2 converts to 2", function() {
     var encodedNumber = file.getEncodedNumberAt(1);
-    expect(decoder.decode(encodedNumber)).toEqual(2);
+    expect(decoder.decode(encodedNumber)).toEqual('2');
   });
 
   it("encodedNumber 3 converts to 3", function() {
     var encodedNumber = file.getEncodedNumberAt(2);
-    expect(decoder.decode(encodedNumber)).toEqual(3);
+    expect(decoder.decode(encodedNumber)).toEqual('3');
   });
 
   it("encodedNumber 'schnubbel' converts to ?", function() {
-    var foo = function() {
       var encodedNumber = "schnubbel";
-      decoder.decode(encodedNumber);
-    }
-    expect(foo).toThrowError(Error);
+      expect(decoder.decode(encodedNumber)).toEqual('?');
   });
 
   it("decodes the whole array to 123456789", function() {

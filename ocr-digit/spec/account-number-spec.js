@@ -1,4 +1,4 @@
-require('./account-number.js');
+require('../src/account-number.js');
 
 describe('createAccountNumber', function() {
 

@@ -1,4 +1,4 @@
-require("./inputreader.js");
+require("../src/inputreader.js");
 
 describe("list of accountnumbers", function() {
   it("can read through", function() {
@@ -15,6 +15,6 @@ describe("list of accountnumbers", function() {
 
     var inputreader = createInputReader(input);
     expect(typeof inputreader.getParsedInput()).toEqual(
-      "[object Array]");
+      "object");
   });
 });
