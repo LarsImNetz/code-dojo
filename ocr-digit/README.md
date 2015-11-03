@@ -1,11 +1,11 @@
-Der Dojo Termin am Montag fällt auf das Sprintende vom CRM Team. Aus diesem Grund ziehe ich den Termin einen Tag vor auf den Freitag, damit auch das CRM teilnehmen kann. Die alte Serie habe ich noch nicht gelöscht oder angepasst, weil dann die Ausnahmen abgebrochen werden würden und dies dann mit den Buchungen über Outlook in Konflikt kommen kann. Ich werde den Montagstermin im neuen Monat nach dem buchen absagen. Ihr könnt ihn natürlich auch jetzt schon einmal absagen…
+Der Dojo Termin am Montag fÃ¤llt auf das Sprintende vom CRM Team. Aus diesem Grund ziehe ich den Termin einen Tag vor auf den Freitag, damit auch das CRM teilnehmen kann. Die alte Serie habe ich noch nicht gelÃ¶scht oder angepasst, weil dann die Ausnahmen abgebrochen werden wÃ¼rden und dies dann mit den Buchungen Ã¼ber Outlook in Konflikt kommen kann. Ich werde den Montagstermin im neuen Monat nach dem buchen absagen. Ihr kÃ¶nnt ihn natÃ¼rlich auch jetzt schon einmal absagen.
 
 
 Sprache: javascript + jasmine
 
-Diesmal gibt es eine neue Aufgabe mit dem Banking OCR. Diese Aufgabe erstreckt sich über mehrere User Stories, die nicht alle zu Beginn bekannt sind ? Die Aufgabe wird über mehrere Dojo Termine umgesetzt:
+Diesmal gibt es eine neue Aufgabe mit dem Banking OCR. Diese Aufgabe erstreckt sich Ã¼ber mehrere User Stories, die nicht alle zu Beginn bekannt sind ? Die Aufgabe wird Ã¼ber mehrere Dojo Termine umgesetzt:
 1.	Banking OCR bauen I
-2.	Banking OCR bauen II ? wir sind hier und ein Einstieg ist natürlich trotzdem möglich
+2.	Banking OCR bauen II ? wir sind hier und ein Einstieg ist natÃ¼rlich trotzdem mÃ¶glich
 3.	Refactoring: Banking OCR (den Source von einem anderen Team)
 
 Dojo: Banking OCR
@@ -27,4 +27,3 @@ account number should have 9 digits, all of which should be
 in the range 0-9. A normal file contains around 500 entries.
 Your first task is to write a program that can take this file and
 parse it into actual account numbers.
-
