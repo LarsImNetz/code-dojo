@@ -15,6 +15,7 @@
     <module>diamond</module>
     <module>bowling</module>
 	<module>cucumber-kata</module>
+	<module>tennis-java-unready</module>
   </modules>
 
 </project>
